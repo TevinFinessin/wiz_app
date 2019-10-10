@@ -11,4 +11,9 @@
  - CLI
  - Roster
  - Scrape 
+
+ PT 3
+ - Get real players
+ - Allow user to select another player
+ - Get stats?
  
