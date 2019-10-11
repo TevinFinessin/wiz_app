@@ -3,23 +3,23 @@ class WizApp::CLI
   def call
     #welcome
     puts "\nWelcome To The Washington Wizards App\n"
-    get_player
+    get_players
     user_player
     get_user_player
   end
 
   
 
-  def get_player
+  def get_players
     # To be scrape
-    @players = WizApp::players.all
+    @players = WizApp::Players.all
   end
 
   def user_player
     #list players
     puts "Choose a Wizards player you would like to see."
     @players.each_with_index do  |wizards, index| 
-      puts "#{index}. #{wizards}"
+      puts "#{index}. #{wizards.name}"
     end
   end
 
