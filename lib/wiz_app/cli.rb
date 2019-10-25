@@ -1,17 +1,13 @@
-require 'pry-nav'
 require 'wiz_app/nba_dot_com_player_row'
 class WizApp::CLI
 
   
   def call
-    #welcome
-    
-    puts
     @players = get_players
-    #binding.pry
     user_player
     get_user_player
     #end_program?#exit
+  binding.pry
   end
 
   
@@ -72,9 +68,21 @@ end
 def show_players_for(chosen_player)
   wizard = @players[chosen_player - 1]
   puts "Here is #{wizard.name} stats of the Washington Wizards"
-  #puts "They played in #{wizard.games}"
-  puts "G:#{wizard.games} PTS:#{wizard.pts} FG:#{wizard.fg} FG_Percent:#{wizard.fg_percent}  3PT:#{wizard.threepts} FT:#{wizard.ft} Oreb:#{wizard.oreb}
-  Dreb:#{wizard.dreb} Reb:#{wizard.reb} Ast:#{wizard.ast} Stl:#{wizard.stl} TO:#{wizard.turnovers} PF:#{wizard.pf}"
+  puts
+  puts "They played in #{wizard.games} games"
+  puts "They scored a average of #{wizard.pts} pts per games" 
+  puts "Their Field Goal are #{wizard.fg}"
+  puts "Their Field Goal #{wizard.fg_percent}%"
+  puts "3pt pct #{wizard.threepts}%"
+  puts "Free Throw: #{wizard.ft}%"
+  puts "Offensive Rebound: #{wizard.oreb}"
+  puts "Defense Rebound: #{wizard.dreb}"
+  puts "Total Rebounds: #{wizard.reb}"
+  puts "Assist: #{wizard.ast} avg" 
+  puts "Total Steals: #{wizard.stl}"
+  puts "Turnovers: #{wizard.turnovers}"
+  puts "PF: #{wizard.pf}"
+  puts
   return_menu
 end
 

@@ -1,7 +1,7 @@
 # WizApp
 
 
-To find Each players On the Washington Wizards
+To find Each players stats On the Washington Wizards enter a number 1-12 and you should able to return back their stats from NBA.com. Once you enter a number and would like to go go again enter "wiz" to rerun back to the menu with all the players. Enter "x" or "X" to exit the app.
 
 ## Installation
 
