@@ -1,7 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
 #require 'pry'
-
 @doc = Nokogiri::HTML(open('https://www.nba.com/wizards/roster'))
 @doc.css(".wrapper").each do |a|
   player = playernew
@@ -15,7 +14,6 @@ require 'open-uri'
    end
    @doc2 = Nokogiri::HTML(open('player_url'))
        stats = @doc2.css(".player-stats__stat-value")
-       binding.pry
   end
 #binding.pry
 

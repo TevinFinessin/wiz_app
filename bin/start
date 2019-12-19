@@ -2,6 +2,8 @@
 lib = File.expand_path('../../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'wiz_app'
+require_relative '../lib/wiz_app'
+
+#require 'wiz_app'
 
 WizApp::CLI.new.call

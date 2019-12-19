@@ -10,7 +10,10 @@
  - Season
  - CLI
  - Roster
- - Scrape 
+ - Scrape
+ - player
+ attributes :name, games, points, turnovers
+ iterate tds/tbody
 
  PT 3
  - Get real players
