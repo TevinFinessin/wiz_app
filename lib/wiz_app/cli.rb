@@ -43,7 +43,7 @@ class WizApp::CLI
       puts "#{input} is invalid please enter a valid number between 
       1 and  #{@players.length}" 
       get_players
-      #binding.pry
+      binding.pry
     end
   end
 
@@ -64,7 +64,5 @@ class WizApp::CLI
 
  
 
-  def end_app
-    puts "Thank you for using this Wizard App"
-  end
+  
 end
