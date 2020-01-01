@@ -18,7 +18,7 @@ class WizApp::CLI
 
   def get_players
     #WizApp::Scraper.scrape
-    @players = WizApp::Players.all.uniq {|wiz| wiz.name}
+    @players = WizApp::Players.all.each {|wiz| wiz.name}
     @players.each_with_index { |wizards, index| puts "#{index + 1}. #{wizards.name}"}
     #binding.pry
   end
@@ -43,7 +43,6 @@ class WizApp::CLI
       puts "#{input} is invalid please enter a valid number between 
       1 and  #{@players.length}" 
       get_players
-      binding.pry
     end
   end
 
@@ -54,7 +53,7 @@ class WizApp::CLI
   def show_players_for(chosen_player)
     wizard = @players[chosen_player - 1]
     puts "Here is #{wizard.name} stats of the Washington Wizards"
-    puts "Their  position is a #{wizard.position}"
+    puts "Their position is a #{wizard.position}"
     puts "Their jersey number is #{wizard.jersey_num}"
     puts "They played a total of #{wizard.games} games"
     puts "They scored a total of #{wizard.points}.ppg"
