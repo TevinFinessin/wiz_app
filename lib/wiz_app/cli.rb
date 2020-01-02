@@ -3,7 +3,7 @@ require 'pry'
 class WizApp::CLI
 
   def call
-    puts "\nWelcome To The Washington Wizards App\n"
+    puts Rainbow("\nWelcome To The Washington Wizards App\n").blue
     puts
     WizApp::Scraper.scrape
     puts "Choose a number to pick a Wizards player you would like to see."
@@ -40,8 +40,8 @@ class WizApp::CLI
     chosen_player = input.to_i
     show_players_for(chosen_player) if valid_input(chosen_player, @players)
     if !valid_input(chosen_player, @players)
-      puts "#{input} is invalid please enter a valid number between 
-      1 and  #{@players.length}" 
+      puts Rainbow("#{input} is invalid please enter a valid number between 
+      1 and  #{@players.length}").red
       get_players
     end
   end
@@ -56,8 +56,8 @@ class WizApp::CLI
     puts Rainbow("Their position is a #{wizard.position}").blue
     puts Rainbow("Their jersey number is #{wizard.jersey_num}").blue
     puts Rainbow("They played a total of #{wizard.games} games").blue
-    puts "They scored a total of #{wizard.points}.ppg"
-    puts "For more stats here is the players link #{wizard.url}"
+    puts Rainbow("They scored a total of #{wizard.points}.ppg").blue
+    puts Rainbow("For more stats here is the players link #{wizard.url}").blue
     puts
   end
 
