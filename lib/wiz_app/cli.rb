@@ -52,10 +52,10 @@ class WizApp::CLI
 
   def show_players_for(chosen_player)
     wizard = @players[chosen_player - 1]
-    puts "Here is #{wizard.name} stats of the Washington Wizards"
-    puts "Their position is a #{wizard.position}"
-    puts "Their jersey number is #{wizard.jersey_num}"
-    puts "They played a total of #{wizard.games} games"
+    puts Rainbow("Here is #{wizard.name} stats of the Washington Wizards").blue
+    puts Rainbow("Their position is a #{wizard.position}").blue
+    puts Rainbow("Their jersey number is #{wizard.jersey_num}").blue
+    puts Rainbow("They played a total of #{wizard.games} games").blue
     puts "They scored a total of #{wizard.points}.ppg"
     puts "For more stats here is the players link #{wizard.url}"
     puts
