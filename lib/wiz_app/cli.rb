@@ -9,13 +9,13 @@ class WizApp::CLI
     puts "Choose a number to pick a Wizards player you would like to see."
     puts
     get_players
+    #Loop so that the user can continue enter a number 1 - 18.
     loop do
       menu
     end
   end
 
   
-
   def get_players
     #WizApp::Scraper.scrape
     @players = WizApp::Players.all.each {|wiz| wiz.name}
@@ -31,7 +31,7 @@ class WizApp::CLI
 
     if input == "X" || input == "x"
       puts
-      puts "Thank you for using this Wizard App"
+      puts Rainbow("Thank you for using this Wizard App").blue
       puts
       exit
     end
